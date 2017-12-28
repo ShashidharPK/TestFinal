@@ -1,0 +1,15 @@
+21/11/17
+1. complete java decompile in module file
+2. discussion with sujith on webinar
+3. unit test backup functionality with srikanth
+4. Create docker latest version and upload to sharepoint
+
+22/11/17
+
+Project scan analysis
+
+biojava with die
+start time: 10:59
+
+biojava with die
+start time: 12:29
