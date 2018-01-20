@@ -59,7 +59,17 @@ if(!(name==" " && id==" "  && phone==" "  && pwd== " "))
      Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
-    st.executeQuery("insert into student values("+id+",'"+name+"',"+phone+",'"+pwd+"')");
+    <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: SQL Injection 
+ 	 Vulnerable Line: st.executeQuery("insert_into_student_values("+id+",'"+name+"',"+phone+",'"+pwd+"')"); --%>
+ 	String query = "INSERT INTO student VALUES (? ,? ,? ,? )";
+PreparedStatement stmt = con.prepareStatement(query);
+stmt.setString(1, id);
+stmt.setString(2, name);
+stmt.setString(3, phone);
+stmt.setString(4, pwd);
+
+ 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
+
     out.println ("Insert Successful");
 
 }catch(Exception e1)
@@ -91,7 +101,11 @@ if(!( id==" " ))
              {
         	 %>
 
-        	 <input type="text" name="t3" value="<%= username %>" size=20 maxlength=20></td>
+        	 <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: Cross Site Scripting 
+ 	 Vulnerable Line: <input_type="text"_name="t3"_value="<%=_username_%>"_size=20_maxlength=20></td> --%>
+ 	<input type="text" name="t3" value="<c:out value="${ username }" />" size=20 maxlength=20></td>
+ 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
+
         	 <%
         	 }
          
@@ -120,7 +134,12 @@ if(!(id==" "))
      Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
-    String query="delete from student where stud_id="+id;
+    <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: SQL Injection 
+ 	 Vulnerable Line: String_query="delete_from_student_where_stud_id="+id; --%>
+ 	PreparedStatement st = connection.prepareStatement("DELETE FROM  student  WHERE  stud_id = ?");
+st.setString(1,);
+ 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
+
      st.executeUpdate(query);
     
 }catch(Exception e1)
@@ -147,7 +166,12 @@ if(!(name==" " && id==" "  && phone==" "  && pwd== " "))
      Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
-    String query="update student set stud_id="+id+",stud_name='"+name+"',phone="+phone+",pwd='"+pwd+"'where stud_id="+id;
+    <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: SQL Injection 
+ 	 Vulnerable Line: String_query="update_student_set_stud_id="+id+",stud_name='"+name+"',phone="+phone+",pwd='"+pwd+"'where_stud_id="+id; --%>
+ 	PreparedStatement st = connection.prepareStatement("UPDATE  student  SET  stud_id = ?");
+st.setString(1,id+",stud_name='"+name+"',phone="+phone+",pwd='"+pwd+"'where stud_id=");
+ 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
+
      st.executeUpdate(query);
     
 }catch(Exception e1)

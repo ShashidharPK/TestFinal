@@ -73,21 +73,7 @@ if(!(qid==" " && author==" "  && quest==" "  && op1== " "&& op2== " "&& op3== " 
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
     
-    <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: SQL Injection 
- 	 Vulnerable Line: st.executeQuery("insert_into_question_values("+qid+",'"+quest+"',"+ans+",'"+author+"','"+op1+"','"+op2+"','"+op3+"','"+op4+"')"); --%>
- 	String query = "INSERT INTO question VALUES (? ,? ,? ,? ,? ,? ,? ,? )";
-PreparedStatement stmt = con.prepareStatement(query);
-stmt.setString(1, qid);
-stmt.setString(2, quest);
-stmt.setString(3, ans);
-stmt.setString(4, author);
-stmt.setString(5, op1);
-stmt.setString(6, op2);
-stmt.setString(7, op3);
-stmt.setString(8, op4);
-
- 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
-
+    st.executeQuery("insert into question values("+qid+",'"+quest+"',"+ans+",'"+author+"','"+op1+"','"+op2+"','"+op3+"','"+op4+"')");
     
     
     out.println ("Insert Successful");
@@ -145,12 +131,7 @@ if(!(qid==" "))
      Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
-    <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: SQL Injection 
- 	 Vulnerable Line: String_query="delete_from_question_where_q_id="+qid; --%>
- 	PreparedStatement st = connection.prepareStatement("DELETE FROM  question  WHERE  q_id = ?");
-st.setString(1,);
- 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
-
+    String query="delete from question where q_id="+qid;
      st.executeUpdate(query);
     
 }catch(Exception e1)
@@ -181,12 +162,7 @@ quest=request.getParameter("t3");
      Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
-    <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: SQL Injection 
- 	 Vulnerable Line: String_query="update_question_set_q_id="+qid+",ques='"+quest+"',ans="+ans+",author='"+author+"',op1='"+op1+"',op2='"+op2+"',op3='"+op3+"',op4='"+op4+"'where_q_id="+qid; --%>
- 	PreparedStatement st = connection.prepareStatement("UPDATE  question  SET  q_id = ?");
-st.setString(1,qid+",ques='"+quest+"',ans="+ans+",author='"+author+"',op1='"+op1+"',op2='"+op2+"',op3='"+op3+"',op4='"+op4+"'where q_id=");
- 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
-
+    String query="update question set q_id="+qid+",ques='"+quest+"',ans="+ans+",author='"+author+"',op1='"+op1+"',op2='"+op2+"',op3='"+op3+"',op4='"+op4+"'where q_id="+qid;
      st.executeUpdate(query);
     
 }catch(Exception e1)
