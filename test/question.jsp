@@ -1,53 +1,44 @@
+shashi
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"import="java.sql.*" %>
+    pageEncoding="ISO-8859-1" import="java.sql.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
 <body background="F:\wallies\HD Wallpapers\img36.jpg">
-<form action="question.jsp" method=post>
+<form action="studentregistration.jsp" method=post>
 <center>
 <table cellpadding=8 cellspacing=8 border="10" bgcolor="transparent">
 <BR><BR><BR><BR>
 <th bgcolor="transparent" colspan=2>
-<font size=10 face="Times New Roman" color=LIGHTgrey>QUESTION BANK</font>
+<font size=10 face="Times New Roman" color=LIGHTgrey>STUDENT REGISTRATION </font>
 <br>
 </th>
  
 <tr bgcolor="transparent">
 <td valign=top> 
 <font size=5 face="Times New Roman" color=LIGHTYELLOW>
-<b>Q.NO.</b>
+<b>NAME</b>
 </font>
-<input type="text" name="t1" value=""  id="txt1" size=3 maxlength=3></td>
+<input type="text" name="t1" value=""  id="txt1" size=20 maxlength=20></td>
 <td valign=top> 
 <font size=5 face="Times New Roman" color=LIGHTYELLOW>
-<b>AUTHOR</b>
+<b>STUDENT_ID</b>
 </font>
-<input type="text" name="t2" value="" size=30 maxlength=30></td>
+<input type="text" name="t2" value="" size=20 maxlength=20></td>
 </tr>
 
 <tr bgcolor="transparent">
-<td align=center colspan=2>
+<td valign=top> 
 <font size=5 face="Times New Roman" color=LIGHTYELLOW>
-<b>QUESTION</b>
+<b>CONTACT NO.</b>
 </font>
-<br><TEXTAREA name="t3" rows=5 cols=100 Wrap=true> </TEXTAREA></td>
-</tr>
-<tr bgcolor="transparent">
-<td align=center colspan=2>
-<input type='radio' name='o1'>1
-<input type="text" name="t4" value="" size=40 maxlength=40><br>
-<input type='radio' name='o1'>2
-<input type="text" name="t5" value="" size=40 maxlength=40><br>
-<input type='radio' name='o1'>3
-<input type="text" name="t6" value="" size=40 maxlength=40><br>
-<input type='radio' name='o1'>4
-<input type="text" name="t7" value="" size=40 maxlength=40>
-</td>
-</tr>
+<input type="text" name="t3" value="" size=20 maxlength=10></td>
+<td valign=top> 
+<font size=5 face="Times New Roman" color=LIGHTYELLOW>
+<b>PASSWORD</b>
+</font>
+<input type="text" name="t4" value="" size=20 maxlength=20></td>
+
 
 <tr bgcolor="transparent">
 <td align=center colspan=2>
@@ -55,15 +46,12 @@
 
 
 <%
-String qid=request.getParameter("t1");
-String author=request.getParameter("t2");
-String quest=request.getParameter("t3");
-String op1=request.getParameter("t4");
-String op2=request.getParameter("t5");
-String op3=request.getParameter("t6");
-String op4=request.getParameter("t7");
-String ans=request.getParameter("o1");
-if(!(qid==" " && author==" "  && quest==" "  && op1== " "&& op2== " "&& op3== " "&& op4== " "&& ans== " "))
+String name=request.getParameter("t1");
+String id=request.getParameter("t2");
+String phone=request.getParameter("t3");
+String pwd=request.getParameter("t4");
+
+if(!(name==" " && id==" "  && phone==" "  && pwd== " "))
 {
 
 
@@ -72,22 +60,28 @@ if(!(qid==" " && author==" "  && quest==" "  && op1== " "&& op2== " "&& op3== " 
      Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
-    
-    st.executeQuery("insert into question values("+qid+",'"+quest+"',"+ans+",'"+author+"','"+op1+"','"+op2+"','"+op3+"','"+op4+"')");
-    
-    
+    <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: SQL Injection 
+ 	 Vulnerable Line: st.executeQuery("insert_into_student_values("+id+",'"+name+"',"+phone+",'"+pwd+"')"); --%>
+ 	String query = "INSERT INTO student VALUES (? ,? ,? ,? )";
+PreparedStatement stmt = con.prepareStatement(query);
+stmt.setString(1, id);
+stmt.setString(2, name);
+stmt.setString(3, phone);
+stmt.setString(4, pwd);
+
+ 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
+
     out.println ("Insert Successful");
 
 }catch(Exception e1)
 {
-	out.println(e1);
 }
 }
 %>
-<input type="button" value="SEARCH" >
+<input type="submit" value="SEARCH" >
 
 <%
-if(!( qid==" " ))
+if(!( id==" " ))
 {
 
 
@@ -96,14 +90,24 @@ if(!( qid==" " ))
      Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
-     ResultSet rs=st.executeQuery("select * from question");
+     ResultSet rs=st.executeQuery("select * from student");
     while(rs.next())
          {
          String username=rs.getString(1);
-         if(qid.equals(username) )
-             {
 
-           //setElementById("txt1")=rs.getString(2);
+
+
+
+         if(id.equals(username) )
+             {
+        	 %>
+
+        	 <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: Cross Site Scripting 
+ 	 Vulnerable Line: <input_type="text"_name="t3"_value="<%=_username_%>"_size=20_maxlength=20></td> --%>
+ 	<input type="text" name="t3" value="<c:out value="${ username }" />" size=20 maxlength=20></td>
+ 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
+
+        	 <%
         	 }
          
   
@@ -121,8 +125,8 @@ if(!( qid==" " ))
 %>
 <input type="SUBMIT" value="DELETE" >
 <%
-qid=request.getParameter("t2");
-if(!(qid==" "))
+id=request.getParameter("t2");
+if(!(id==" "))
 {
 
 
@@ -131,7 +135,12 @@ if(!(qid==" "))
      Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
-    String query="delete from question where q_id="+qid;
+    <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: SQL Injection 
+ 	 Vulnerable Line: String_query="delete_from_student_where_stud_id="+id; --%>
+ 	PreparedStatement st = connection.prepareStatement("DELETE FROM  student  WHERE  stud_id = ?");
+st.setString(1,);
+ 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
+
      st.executeUpdate(query);
     
 }catch(Exception e1)
@@ -144,16 +153,12 @@ if(!(qid==" "))
 
 <input type="SUBMIT" value="UPDATE">
 <%
-qid=request.getParameter("t1");
-author=request.getParameter("t2");
-quest=request.getParameter("t3");
- op1=request.getParameter("t4");
- op2=request.getParameter("t5");
- op3=request.getParameter("t6");
- op4=request.getParameter("t7");
- ans=request.getParameter("o1");
+name=request.getParameter("t1");
+id=request.getParameter("t2");
+phone=request.getParameter("t3");
+pwd=request.getParameter("t4");
 
- if(!(qid==" " && author==" "  && quest==" "  && op1== " "&& op2== " "&& op3== " "&& op4== " "&& ans== " "))
+if(!(name==" " && id==" "  && phone==" "  && pwd== " "))
 {
 
 
@@ -162,7 +167,12 @@ quest=request.getParameter("t3");
      Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
      Connection con=DriverManager.getConnection("jdbc:odbc:abc", "scott", "tiger");
      Statement st=con.createStatement();
-    String query="update question set q_id="+qid+",ques='"+quest+"',ans="+ans+",author='"+author+"',op1='"+op1+"',op2='"+op2+"',op3='"+op3+"',op4='"+op4+"'where q_id="+qid;
+    <%--Changes for ASAP(Application Security Assessment Platform) : start 	 	 Vulnerability: SQL Injection 
+ 	 Vulnerable Line: String_query="update_student_set_stud_id="+id+",stud_name='"+name+"',phone="+phone+",pwd='"+pwd+"'where_stud_id="+id; --%>
+ 	PreparedStatement st = connection.prepareStatement("UPDATE  student  SET  stud_id = ?");
+st.setString(1,id+",stud_name='"+name+"',phone="+phone+",pwd='"+pwd+"'where stud_id=");
+ 	 <%-- Changes for ASAP(Application Security Assessment Platform) : End --%>
+
      st.executeUpdate(query);
     
 }catch(Exception e1)
@@ -172,33 +182,11 @@ quest=request.getParameter("t3");
 %>
 
 <input type="button" value="   EXIT     " onclick="location.href='page1.jsp'">
-</td>
+
 </tr>
 
 </table>
 </center>
  </form>
- hi
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
