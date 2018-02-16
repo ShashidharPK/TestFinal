@@ -38,7 +38,7 @@
 </font>
 <input type="text" name="t4" value="" size=20 maxlength=20></td>
 
-
+c= DriverManager.getConnection( "jdbc:odbc:abc","root","root");
 <tr bgcolor="transparent">
 <td align=center colspan=2>
 <input type="SUBMIT" value="SUBMIT">
