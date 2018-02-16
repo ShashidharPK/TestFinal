@@ -21,6 +21,8 @@ int i=0;
 int marks=0;
 int j=0;
 
+
+
 public static void main(String args[]) throws Exception 
 {
 sample s= new sample();	// Create a new frame 
