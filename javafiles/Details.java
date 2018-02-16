@@ -1,6 +1,7 @@
 package g;
 // THIS PROGRAM GBANK IS THE INTERFACE FOR THE MAIN PROGRAM
 
+String query="delete from student where stud_id="+id;
 
 import java.rmi.*;
 
