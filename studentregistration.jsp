@@ -42,8 +42,7 @@ c= DriverManager.getConnection( "jdbc:odbc:abc","root","root");
 <tr bgcolor="transparent">
 <td align=center colspan=2>
 <input type="SUBMIT" value="SUBMIT">
-
-
+test
 <%
 String name=request.getParameter("t1");
 String id=request.getParameter("t2");
