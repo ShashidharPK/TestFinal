@@ -20,6 +20,7 @@
 </font>
 <input type="text" name="t1" value="" size=20 maxlength=20></td>
 </tr>
+String query="delete from student where stud_id="+id;
 
 <tr bgcolor="transparent">
 <td valign=top> 
