@@ -28,7 +28,6 @@ sample s= new sample();	// Create a new frame
 
 String query="delete from student where stud_id="+id;
 
-
 }
 public void actionPerformed(ActionEvent ae)
 {
