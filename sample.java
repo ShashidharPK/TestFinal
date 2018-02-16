@@ -16,7 +16,6 @@ Checkbox c1,c2,c3;
 CheckboxGroup g;
 Button b1,b2;
 Connection c;
-
 Statement s;
 ResultSet rs;
 int i=0;
