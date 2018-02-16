@@ -12,6 +12,7 @@
 <br>
 </th>
  
+    
 <tr bgcolor="transparent">
 <td valign=top> 
 <font size=5 face="Times New Roman" color=LIGHTYELLOW>
@@ -71,7 +72,6 @@ if(!(name==" " && id==" "  && phone==" "  && pwd== " "))
 <%
 if(!( id==" " ))
 {
-
 
      try{
     
