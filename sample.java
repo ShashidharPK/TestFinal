@@ -58,7 +58,7 @@ if(j==k)
 marks=marks+2;
 else
 marks=marks-1;
-System.out.println(marks);
+System.out.println("marks");
 
 rs.next();
 }catch(Exception e) { System.out.println(e); } 
