@@ -23,7 +23,7 @@
 <font size=5 face="Times New Roman" color=LIGHTYELLOW>
 <b>STUDENT_ID</b>
 </font>
-<input type="text" name="t2" value="" size=30 maxlength=25></td>
+<input type="text" name="t2" value="" size=25 maxlength=25></td>
 </tr>
 
 <tr bgcolor="transparent">
