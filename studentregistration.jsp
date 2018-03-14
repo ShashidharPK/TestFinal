@@ -31,7 +31,7 @@
 <font size=5 face="Times New Roman" color=LIGHTYELLOW>
 <b>CONTACT NO.</b>
 </font>
-<input type="text" name="t3" value="" size=25 maxlength=10></td>
+<input type="text" name="t3" value="" size=20 maxlength=10></td>
 <td valign=top> 
 <font size=5 face="Times New Roman" color=LIGHTYELLOW>
 <b>PASSWORD</b>
