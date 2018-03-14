@@ -88,7 +88,7 @@ public class segFaultFix {
     
 	public static void main(String[] args) {
 		
-		System.out.println("Unusual line length found on the folowing files : \n");
+		System.out.println("Unusua line length found on the folowing files : \n");
 		
 		printMargin();
 		
