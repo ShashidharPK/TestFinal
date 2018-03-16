@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-<body background="F:\wallies\HD Wallpapers\img3.jpg">
+<body background="F:\wallies\HD Wallpapers\img4.jpg">
 <form action="studentregistration.jsp" method=post>
 <center>
 <table cellpadding=8 cellspacing=8 border="10" bgcolor="transparent">
