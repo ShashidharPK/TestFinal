@@ -18,7 +18,7 @@
 <font size=5 face="Times New Roman" color=LIGHTYELLOW>
 <b>NAME</b>
 </font>
-<input type="text" name="t1" value=""  id="txt1" size=20 maxlength=20></td>
+<input type="text" name="t1" value=""  id="txt1" size=20 maxlength=25></td>
 <td valign=top> 
 <font size=5 face="Times New Roman" color=LIGHTYELLOW>
 <b>STUDENT_ID</b>
