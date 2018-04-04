@@ -6,7 +6,7 @@
 <body background="F:\wallies\HD Wallpapers\img5.jpg">
 <form action="studentregistration.jsp" method=post>
 <center>
-<table cellpadding=8 cellspacing=8 border="24" bgcolor="transparent">
+<table cellpadding=8 cellspacing=8 border="25" bgcolor="transparent">
 <BR><BR><BR><BR>
 <th bgcolor="transparent" colspan=2>
 <font size=10 face="Times New Roman" color=LIGHTgrey>STUDENT REGISTRATION </font>
