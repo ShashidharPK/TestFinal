@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="2" name="XML-Threat-Protection">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1516088241302</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description>Threat-Protection</Description>
+    <DisplayName>Threat-Protection</DisplayName>
+    <LastModifiedAt>1516088241302</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <Policies>
+        <Policy>Key-Value-Map-Operations</Policy>
+        <Policy>XML-Threat-Protection</Policy>
+    </Policies>
+    <Resources/>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

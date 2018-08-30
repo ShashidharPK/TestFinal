@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignMessageVerb">
+    <DisplayName>AssignMessageVerb</DisplayName>
+    <AssignVariable>
+        <Name>request_verb</Name>
+        <Value/>
+        <Ref>request.verb</Ref>
+    </AssignVariable>
+</AssignMessage>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations name="Key-Value-Map-Operations-1" mapIdentifier="Security-KVM" enabled="true" continueOnError="false" async="false">
+    <DisplayName>KVM</DisplayName>
+    <Get assignTo="RatePerMinute" index="1">
+        <Key>
+            <Parameter>RatePerMinute</Parameter>
+        </Key>
+    </Get>
+    <!--<Get assignTo="RatePerSecond" index="2">
+        <Key>
+            <Parameter>RatePerSecond</Parameter>
+        </Key>
+    </Get>-->
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

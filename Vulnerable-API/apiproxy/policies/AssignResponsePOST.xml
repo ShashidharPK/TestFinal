@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignResponsePOST">
+    <DisplayName>AssignResponsePOST</DisplayName>
+    <Properties/>
+    <AssignTo createNew="false" transport="http" type="response"/>
+    <Set>
+        <Verb>POST</Verb>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+        {
+            "Greetings": "Hello '@request.formparam.GuestName#'"
+        }
+    </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

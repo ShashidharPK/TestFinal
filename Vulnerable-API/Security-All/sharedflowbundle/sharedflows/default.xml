@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>Spike-Arrest</Name>
+    </Step>
+    <Step>
+        <Name>Validate-Access-Token</Name>
+    </Step>
+    <Step>
+        <Name>Quota</Name>
+    </Step>
+    <Step>
+        <Name>Threat-Protection</Name>
+    </Step>
+</SharedFlow>

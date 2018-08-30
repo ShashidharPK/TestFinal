@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RegularExpressionProtection name="RegexProtection" enabled="true" continueOnError="false" async="false">
+    <DisplayName>RegexProtection</DisplayName>
+    <Properties/>
+    <Source>request</Source>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <QueryParam name="GuestName">
+        <!-- <Variable name="myVariable">-->
+        <Pattern>[\s]*(?i)((delete)|(select)|(exec)|(drop\s*table)|(insert)|(shutdown)|(update)|(\bor\b))</Pattern>
+    </QueryParam>
+</RegularExpressionProtection>

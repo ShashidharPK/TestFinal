@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Spike-Arrest-FaultHandler">
+    <DisplayName>Spike-Arrest-FaultHandler</DisplayName>
+    <Properties/>
+    <AssignTo createNew="false" transport="http" type="response"/>
+    <Set>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+         {
+                "errors":[
+                    {
+                        "code": "429",
+                        "userMessage": "Spike Arrest Limit Exceeded",
+                        "systemMessage": "Spike Arrest Violation"
+                    }
+                ]
+            } 
+    </Payload>
+        <StatusCode>429</StatusCode>
+        <ReasonPhrase>Maximum Request Exceeded</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

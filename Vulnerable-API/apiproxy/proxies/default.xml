@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="Spike Arrest Errors">
+            <Step>
+                <Name>Spike-Arrest-FaultHandler</Name>
+                <Condition>(fault.name Matches "SpikeArrestViolation")</Condition>
+            </Step>
+            <Condition>ratelimit.Spike-Arrest-1.datastore.fail.open=false</Condition>
+        </FaultRule>
+        <FaultRule name="Quota Errors">
+            <Step>
+                <Name>Quota-Fault-Handler</Name>
+                <Condition>(fault.name Matches "QuotaViolation")</Condition>
+            </Step>
+            <Condition>ratelimit.Quota-1.failed=true</Condition>
+        </FaultRule>
+        <FaultRule name="XML Threat Protection Errors">
+            <Step>
+                <Name>XML-Threat-Protection-Fault-Handler</Name>
+                <Condition>(fault.name Matches "ExecutionFailed")</Condition>
+            </Step>
+            <Condition>xmlattack.failed=true</Condition>
+        </FaultRule>
+        <FaultRule name="JSON Threat Protection Errors">
+            <Step>
+                <Name>JSON-Threat-Fault-Handler</Name>
+                <Condition>(fault.name Matches "ExecutionFailed")</Condition>
+            </Step>
+            <Condition>jsonattack.failed=true</Condition>
+        </FaultRule>
+        <FaultRule name="regex-threat">
+            <Step>
+                <Name>DetectRegexError</Name>
+            </Step>
+            <Condition>(fault.name = "ThreatDetected")</Condition>
+        </FaultRule>
+    </FaultRules>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>Security-All</Name>
+            </Step>
+            <Step>
+                <Name>AssignMessageVerb</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="Hello World">
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>AssignResponse</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/greet") and (request_verb = "GET")</Condition>
+        </Flow>
+        <Flow name="Hello">
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>AssignResponsePOST</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/greeting") and (request_verb = "POST")</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/vulnerableAPI</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

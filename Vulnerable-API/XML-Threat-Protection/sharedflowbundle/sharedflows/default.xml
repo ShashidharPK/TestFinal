@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>Key-Value-Map-Operations</Name>
+    </Step>
+    <Step>
+        <Name>XML-Threat-Protection</Name>
+    </Step>
+</SharedFlow>

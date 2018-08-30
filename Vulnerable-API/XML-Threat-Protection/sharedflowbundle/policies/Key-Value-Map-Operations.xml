@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations name="Key-Value-Map-Operations" async="false" continueOnError="false" enabled="true" mapIdentifier="Security-KVM">
+    <DisplayName>KVM</DisplayName>
+    <Get index="1" assignTo="element">
+        <Key>
+            <Parameter>element</Parameter>
+        </Key>
+    </Get>
+    <Get index="2" assignTo="attribute">
+        <Key>
+            <Parameter>attribute</Parameter>
+        </Key>
+    </Get>
+    <Get index="3" assignTo="NSprefix">
+        <Key>
+            <Parameter>NSprefix</Parameter>
+        </Key>
+    </Get>
+    <Get index="4" assignTo="ProcessingInstructionTargetNum">
+        <Key>
+            <Parameter>ProcessingInstructionTargetNum</Parameter>
+        </Key>
+    </Get>
+    <Get index="5" assignTo="sourceXML">
+        <Key>
+            <Parameter>sourceXML</Parameter>
+        </Key>
+    </Get>
+    <Get index="6" assignTo="nodedepth">
+        <Key>
+            <Parameter>nodedepth</Parameter>
+        </Key>
+    </Get>
+    <Get index="7" assignTo="AttributeCount">
+        <Key>
+            <Parameter>AttributeCount</Parameter>
+        </Key>
+    </Get>
+    <Get index="8" assignTo="NScount">
+        <Key>
+            <Parameter>NScount</Parameter>
+        </Key>
+    </Get>
+    <Get index="9" assignTo="text">
+        <Key>
+            <Parameter>text</Parameter>
+        </Key>
+    </Get>
+    <Get index="10" assignTo="ValueLimitAttribute">
+        <Key>
+            <Parameter>ValueLimitAttribute</Parameter>
+        </Key>
+    </Get>
+    <Get index="11" assignTo="nsURI">
+        <Key>
+            <Parameter>nsURI</Parameter>
+        </Key>
+    </Get>
+    <Get index="12" assignTo="comment">
+        <Key>
+            <Parameter>comment</Parameter>
+        </Key>
+    </Get>
+    <Get index="13" assignTo="ProcInstData">
+        <Key>
+            <Parameter>ProcInstData</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

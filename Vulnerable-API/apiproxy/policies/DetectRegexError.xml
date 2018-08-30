@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="DetectRegexError">
+    <DisplayName>DetectRegexError</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+         {
+                "errors":[
+                    {
+                        "code": "400",
+                        "userMessage": "Bad Request",
+                        "systemMessage": "Bad Request"
+                    }
+                ]
+            } 
+            </Payload>
+            <StatusCode>400</StatusCode>
+            <ReasonPhrase>Bad request</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

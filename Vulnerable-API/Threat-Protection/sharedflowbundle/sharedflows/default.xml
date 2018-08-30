@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>Flow-Callout-1</Name>
+    </Step>
+    <Step>
+        <Name>Flow-Callout-2</Name>
+    </Step>
+    <Step>
+        <Name>Flow-Callout-3</Name>
+    </Step>
+</SharedFlow>

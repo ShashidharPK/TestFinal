@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations name="Key-Value-Map-Operations" async="false" continueOnError="false" enabled="true" mapIdentifier="Security-KVM">
+    <DisplayName>KVM</DisplayName>
+    <Get index="1" assignTo="ArrayElementCountNum">
+        <Key>
+            <Parameter>ArrayElementCountNum</Parameter>
+        </Key>
+    </Get>
+    <Get index="2" assignTo="ContainerDepthNum">
+        <Key>
+            <Parameter>ContainerDepthNum</Parameter>
+        </Key>
+    </Get>
+    <Get index="3" assignTo="ObjectEntryCountNum">
+        <Key>
+            <Parameter>ObjectEntryCountNum</Parameter>
+        </Key>
+    </Get>
+    <Get index="4" assignTo="ObjectEntryNameLengthNum">
+        <Key>
+            <Parameter>ObjectEntryNameLengthNum</Parameter>
+        </Key>
+    </Get>
+    <Get index="5" assignTo="StringValueLengthNum">
+        <Key>
+            <Parameter>StringValueLengthNum</Parameter>
+        </Key>
+    </Get>
+    <Get index="6" assignTo="SourceValue">
+        <Key>
+            <Parameter>SourceValue</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

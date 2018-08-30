@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+    <Policies>
+        <VersionInfo resourceName="Assign-Message-1" version="551ad6dd56f811e0f3060e59f60871a807cba20472958380cc427273e2b4bdbd1ee638988d8f7bfd1c0db93b54271876ef5b5381e92ded50acf2b0157cd22ae5"/>
+        <VersionInfo resourceName="Service-Callout-1" version="78cb58f4d805d72bb08f1e22d1cff3112b8c8efeb4c104afa039019122006933b1a8fd72dfec297ed274a2dc21fb1caa1f23b1a9b924af087436e075e4285367"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="0f5cd4ee2ea33efa6152afb39403dd5338cc85b9c635b4b3df40c05642eb4b79bf6bdd3957a40d46c939080fecdbb5761b394ec00334a6985d780b9c4097af90"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints/>
+</Manifest>

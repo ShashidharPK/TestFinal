@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="false" name="Validate-Access-Token">
+    <DisplayName>Validate Access Token</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>Validate-Access-Token</SharedFlowBundle>
+</FlowCallout>

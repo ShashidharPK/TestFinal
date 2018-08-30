@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="6" name="Vulnerable-API">
+    <Basepaths>/no-target</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1515750366181</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description></Description>
+    <DisplayName>No-Target</DisplayName>
+    <LastModifiedAt>1516017900401</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <Policies>
+        <Policy>AssignMessageVerb</Policy>
+        <Policy>AssignResponse</Policy>
+        <Policy>AssignResponsePOST</Policy>
+        <Policy>DetectRegexError</Policy>
+        <Policy>JSON-Threat-Fault-Handler</Policy>
+        <Policy>Quota-Fault-Handler</Policy>
+        <Policy>Quota</Policy>
+        <Policy>Security-All</Policy>
+        <Policy>Spike-Arrest-FaultHandler</Policy>
+        <Policy>Spike-Arrest</Policy>
+        <Policy>Threat-Protection</Policy>
+        <Policy>Validate-Access-Token</Policy>
+        <Policy>XML-Threat-Protection-Fault-Handler</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

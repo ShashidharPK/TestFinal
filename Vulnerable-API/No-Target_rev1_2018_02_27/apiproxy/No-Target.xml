@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="No-Target">
+    <Basepaths>/no-target</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1519708075501</CreatedAt>
+    <CreatedBy>manjunatha.b.r@accenture.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>No-Target</DisplayName>
+    <LastModifiedAt>1519709025501</LastModifiedAt>
+    <LastModifiedBy>manjunatha.b.r@accenture.com</LastModifiedBy>
+    <ManifestVersion>8106f7bd87dba4fb88c74410c782c22c44b895f1dc31f6c43344964e03c550b0ec62d3b10db59d43a0cb92269b08d430e10e9b7811417864c3ab6915bcb29ef6</ManifestVersion>
+    <Policies>
+        <Policy>Assign-Message-1</Policy>
+        <Policy>Service-Callout-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>
