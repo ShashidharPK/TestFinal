@@ -2,6 +2,8 @@
 <Quota type="calendar" name="Quota-1" enabled="true" continueOnError="false" async="false">
     <DisplayName>Quota</DisplayName>
     <Properties/>
+    
+    sssss
     <Allow count="200" countRef="apiproduct.developer.quota.limit"/>
     <Interval ref="apiproduct.developer.quota.interval"/>
     <TimeUnit ref="apiproduct.developer.quota.timeunit"/>
