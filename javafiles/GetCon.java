@@ -6,6 +6,9 @@ sss
 public statisssc Cosssnnection con;
 static{
 	try {
+		
+		
+		sss
 		Class.forName(DBIntializer.DRIVER);
 		con=DriverManager.getConnection(DBIntializer.CON_STRING,DBIntializer.USERNAME,DBIntializer.PASSWORD);
 	} catch (ClassNotFoundException e) {
