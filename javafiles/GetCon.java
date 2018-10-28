@@ -2,7 +2,7 @@ package g;
 import java.sql.*;
 public class GetCon {
 private GetCon(){}
-
+sss
 public statisssc Cosssnnection con;
 static{
 	try {
