@@ -3,7 +3,7 @@ import java.sql.*;
 public class GetCon {
 private GetCon(){}
 
-public static Connection con;
+public statisssc Connection con;
 static{
 	try {
 		Class.forName(DBIntializer.DRIVER);
